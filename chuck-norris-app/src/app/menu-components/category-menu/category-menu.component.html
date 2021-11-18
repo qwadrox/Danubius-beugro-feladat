@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row m-3">
+    <h1 class="display-5">
+      Chuck Norris Jokes <small class="text-muted">categories</small>
+    </h1>
+  </div>
+  <div class="row m-3">
+    <div class="col-4">
+      <div class="list-group">
+        <a
+          [@Appear]
+          *ngFor="let category of categories$ | async"
+          routerLink="/joke/{{ category }}"
+          class="list-group-item list-group-item-action fs-6"
+        >
+          {{ category | uppercase }}</a
+        >
+      </div>
+    </div>
+    <div class="col-8">
+      <img
+        [@FlyIn]
+        src="\assets\img\chuck-norris-menu.png"
+        class="img-fluid mx-auto d-block"
+        alt="Chuck Norris"
+        matTooltip="Click a category"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body {
+  background: rgb(70, 78, 212);
+  background: linear-gradient(
+    90deg,
+    rgba(70, 78, 212, 1) 0%,
+    rgba(33, 204, 238, 1) 71%
+  );
+  h1,
+  p {
+    color: white;
+  }
+}
+.text-muted {
+  color: #00d5ff !important;
+}

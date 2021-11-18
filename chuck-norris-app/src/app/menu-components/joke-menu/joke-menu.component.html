@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row m-2">
+    <div class="col">
+      <h1 class="display-5">
+        Chuck Norris<small class="text-muted"> {{ category }} jokes</small>
+      </h1>
+      <button type="button" class="m-2 btn btn-light" (click)="goBack()">
+        Go back
+      </button>
+      <button type="button" class="m-2 btn btn-light" (click)="getJoke()">
+        Give me another joke!
+      </button>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center mt-5">
+    <div class="col-5">
+      <p [@Appear] class="fs-1 lh-base">
+        {{ (joke$ | async)?.value }}
+      </p>
+    </div>
+  </div>
+  <div class="row d-flex flex-column">
+    <div class="col-3 mt-auto align-self-end">
+      <p class="m-2">{{ (joke$ | async)?.created_at | date: "fullDate" }}</p>
+    </div>
+  </div>
+</div>
